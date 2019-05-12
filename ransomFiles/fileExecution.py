@@ -1,8 +1,3 @@
-import zipfile
-import Constant
-from pathlib import Path
-import re
-import AdvancedHTMLParser
 from txtProcessing import FileTxtProcessing
 from utils import Util
 from htmlProcessing import htmlprocessing

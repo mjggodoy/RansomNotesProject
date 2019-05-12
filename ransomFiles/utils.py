@@ -1,15 +1,15 @@
 import zipfile
 from pathlib import Path
 import re
-import Constant
+import constant
 
 class Util:
 
     @staticmethod
     def extract_zipfile():
 
-        path_compressed_file = Constant.PATHCOMPRESSEDFILE
-        path_file = Constant.PATH
+        path_compressed_file = constant.PATHCOMPRESSEDFILE
+        path_file = constant.PATH
         zip_ref = zipfile.ZipFile(path_compressed_file)
         zip_ref.extractall(path_file)
         zip_ref.close()
@@ -17,7 +17,7 @@ class Util:
     @staticmethod
     def iterateDirectories():
 
-        rootdir = Path(Constant.PATH)
+        rootdir = Path(constant.PATH)
         file_list = [f for f in rootdir.glob('**/*') if f.is_file()]
         return file_list
 
