@@ -3,7 +3,7 @@ import re
 from utils import Util
 
 
-class htmlprocessing:
+class Htmlprocessing:
 
         def __init__(self, listFilesHtml=None, fileshtmlProcessedURL=None, fileshtmlProcessedEmails=None):
 
@@ -48,7 +48,8 @@ class htmlprocessing:
                         listProcessedLinks.append(self.util.handle_path(html) + '   ' + url)
             return listProcessedLinks
 
-        def processHtmlLine(self, htmlFile):
+
+        def processemaillLine(self, htmlFile):
 
             emailList = []
             with open(htmlFile, encoding='latin-1') as f:
@@ -75,7 +76,7 @@ class htmlprocessing:
                 link2 = parser.getElementsByTagName('a')
                 listLinks.append(link2)
                 processedHtmlFiles.append(self.iterateElementsHtml(listLinks, htmlFile))
-                emailList.append(self.processHtmlLine(htmlFile))
+                emailList.append(self.processemaillLine(htmlFile))
             return processedHtmlFiles, emailList
 
 

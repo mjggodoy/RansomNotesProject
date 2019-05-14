@@ -1,6 +1,7 @@
 from txtProcessing import FileTxtProcessing
 from utils import Util
-from htmlProcessing import htmlprocessing
+from htmlProcessing import Htmlprocessing
+from htaProcessing import HtaProcessing
 
 
 myUtil = Util()
@@ -10,11 +11,14 @@ listFilesText, listFilesHtml, listFilesHta, listExtension = myUtil.group_file_ex
 mytxtProcessing = FileTxtProcessing(listFilesText)
 filestxtProcessed = mytxtProcessing.processTxtFiles()       
 mytxtProcessing = FileTxtProcessing(None, filestxtProcessed)
-mytxtProcessing.iterateTextLists()
+#mytxtProcessing.iterateTextLists()
 
-myhtmlProcessing = htmlprocessing(listFilesHtml, None, None)
+myhtmlProcessing = Htmlprocessing(listFilesHtml, None, None)
 fileshtmlProcessedURL, fileshtmlProcessedEmails  = myhtmlProcessing.processHtmlFiles()
-myhtmlProcessing = htmlprocessing(None, fileshtmlProcessedURL, None)
-myhtmlProcessing.iterateHtmlLists()
-myhtmlProcessing = htmlprocessing(None, None, fileshtmlProcessedEmails)
-myhtmlProcessing.iterateEmailList()
+myhtmlProcessing = Htmlprocessing(None, fileshtmlProcessedURL, None)
+#myhtmlProcessing.iterateHtmlLists()
+#myhtmlProcessing = Htmlprocessing(None, None, fileshtmlProcessedEmails)
+#myhtmlProcessing.iterateEmailList()
+
+myhtaprocessing = HtaProcessing(listFilesHta)
+myhtaprocessing.process_hta_files()
