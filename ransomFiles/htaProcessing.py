@@ -4,12 +4,24 @@ from utils import Util
 
 class HtaProcessing:
 
-    def __init__(self, listFilesHta=None):
+    def __init__(self, listFilesHta=None, htaFileProcessing=None, emailHta=None):
 
         if listFilesHta is None:
             self.listFilesHta = []
         else:
             self.listFilesHta = listFilesHta
+
+        if htaFileProcessing is None:
+            self.htaFileProcessing = []
+        else:
+            self.htaFileProcessing = htaFileProcessing
+
+        if emailHta is None:
+            self.emailHta = []
+        else:
+            self.emailHta = emailHta
+
+        self.util = Util
 
     def extract_url(self, htaFile, listWithUrls):
 
@@ -21,7 +33,7 @@ class HtaProcessing:
                 url = re.findall("(?P<url>https?://[^\s]+)", item2)
                 if url:
                     url = self.fixing_url(url)
-                    urlList.append(Util.handle_path(htaFile) + '  ' + url)
+                    urlList.append(self.util.handle_path(htaFile) + '  ' + url)
             count -= 1
 
         return urlList
@@ -44,6 +56,23 @@ class HtaProcessing:
 
         return fixedurl
 
+    def processemaillLine(self, htaFile):
+
+        emailList = []
+        with open(htaFile, encoding='latin-1') as f:
+            line = f.readline()
+            while line:
+                line = str(line)
+                if '@' in line:
+                    email = re.findall(r'\b[\w.-]+?@\w+?\.\w+?\b', line)
+                    email = str(email).replace('[', "")
+                    email = str(email).replace(']', "")
+                    email = str(email).replace('\'', "")
+                    email = str(email).strip()
+                    emailList.append(email + ' ' + self.util.handle_path(htaFile))
+                line = f.readline()
+        return emailList
+
     def process_hta_files(self):
 
         listWithUrls = []
@@ -56,10 +85,20 @@ class HtaProcessing:
             linkfromTagName = parser.getElementsByTagName('a')
             listWithUrls.append(linkfromTagName)
             listFinal.append(self.extract_url(htaFile, listWithUrls))
-            #print(listFinal)
+            emailList.append(self.processemaillLine(htaFile))
 
-        print(listFinal)
         return listFinal, emailList
+
+    def iterateHtalLists(self):
+        for familyMalware in self.htaFileProcessing:
+            for element in familyMalware:
+                print(element.replace('RansomNoteFiles-master', ''))
+
+    def iterateEmailList(self):
+        emailProcessedemails = list(filter(None, self.emailHta))
+        for element in emailProcessedemails:
+            for element2 in element:
+                print(element2)
 
 
 

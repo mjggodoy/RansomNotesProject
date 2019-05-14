@@ -56,7 +56,7 @@ class Htmlprocessing:
                 line = f.readline()
                 while line:
                     line = str(line)
-                    if ('@' in line):
+                    if '@' in line:
                         email = re.findall(r'\b[\w.-]+?@\w+?\.\w+?\b', line)
                         email = str(email).replace('[', "")
                         email = str(email).replace(']', "")
@@ -81,11 +81,9 @@ class Htmlprocessing:
 
 
         def iterateHtmlLists(self):
-            count = 0
             for familyMalware in self.fileshtmlProcessedURL:
-                for element in self.fileshtmlProcessedURL[count]:
-                    print(element.replace('RansomNoteFiles-master', ''))
-                count += 1
+                for element in familyMalware:
+                    print(familyMalware.replace('RansomNoteFiles-master', ''))
 
         def iterateEmailList(self):
             filestxtProcessedemails = list(filter(None, self.fileshtmlProcessedEmails))
