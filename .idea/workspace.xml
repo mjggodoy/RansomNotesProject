@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0545a55-b408-4688-816c-6d604a4cb8bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ransomFiles/constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/ransomFiles/constant.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ransomFiles/fileExecution.py" beforeDir="false" afterPath="$PROJECT_DIR$/ransomFiles/fileExecution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ransomFiles/htaProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ransomFiles/htaProcessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ransomFiles/htmlProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ransomFiles/htmlProcessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ransomFiles/txtProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ransomFiles/txtProcessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ransomFiles/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ransomFiles/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,34 +21,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ransomFiles/fileExecution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="363">
+              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ransomFiles/htaProcessing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ransomFiles/htmlProcessing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="104" column="58" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="104" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,7 +71,6 @@
       <list>
         <option value="$PROJECT_DIR$/RansomFiles/FileExtraction.py" />
         <option value="$PROJECT_DIR$/ransomFiles/Cosntant.py" />
-        <option value="$PROJECT_DIR$/ransomFiles/constant.py" />
         <option value="$PROJECT_DIR$/ransomFiles/Constant.py" />
         <option value="$PROJECT_DIR$/ransomFiles/fileExtraction.py" />
         <option value="$PROJECT_DIR$/ransomFiles/RansomNoteFiles-master/txtFileProcessing.py" />
@@ -107,9 +81,10 @@
         <option value="$PROJECT_DIR$/htmlProcessing.py" />
         <option value="$PROJECT_DIR$/htaProcessing.py" />
         <option value="$PROJECT_DIR$/ransomFiles/txtProcessing.py" />
-        <option value="$PROJECT_DIR$/ransomFiles/utils.py" />
         <option value="$PROJECT_DIR$/ransomFiles/htmlProcessing.py" />
         <option value="$PROJECT_DIR$/ransomFiles/htaProcessing.py" />
+        <option value="$PROJECT_DIR$/ransomFiles/constant.py" />
+        <option value="$PROJECT_DIR$/ransomFiles/utils.py" />
         <option value="$PROJECT_DIR$/ransomFiles/fileExecution.py" />
       </list>
     </option>
@@ -136,6 +111,12 @@
               <item name="RansomMessagesMining" type="b2602c69:ProjectViewProjectNode" />
               <item name="RansomMessagesMining" type="462c0819:PsiDirectoryNode" />
               <item name="ransomFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RansomMessagesMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RansomMessagesMining" type="462c0819:PsiDirectoryNode" />
+              <item name="ransomFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="Files" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -241,15 +222,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5041152" side_tool="true" weight="0.2635659" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49588478" visible="true" weight="0.2635659" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49588478" visible="true" weight="0.2635659" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32932332" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3106383" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.3106383" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -271,9 +252,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ransomFiles/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -292,23 +270,6 @@
     <entry file="file://$PROJECT_DIR$/ransomFiles/RansomNoteFiles-master/txtFileProcessing.py" />
     <entry file="file://$PROJECT_DIR$/ransomFiles/txtFileProcessing.html" />
     <entry file="file://$PROJECT_DIR$/ransomFiles/RansomNoteFiles-master/utils.py" />
-    <entry file="file://$PROJECT_DIR$/ransomFiles/constant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ransomFiles/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ransomFiles/txtProcessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -319,19 +280,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ransomFiles/htmlProcessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="104" column="58" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="104" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/ranking_mail_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ransomFiles/htaProcessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="294">
           <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -339,10 +299,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/htmlProcessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="94" column="37" lean-forward="true" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_url_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_maildomains_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/constant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_url_html_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="95" column="25" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_mail_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_email_html_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_emaildomain_html_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_url_hta_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_mail_hta_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransomFiles/Files/ranking_maildomain_hta_malwarenotes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ransomFiles/fileExecution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="363">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>

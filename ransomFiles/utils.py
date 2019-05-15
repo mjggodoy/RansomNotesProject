@@ -2,8 +2,8 @@ import zipfile
 from pathlib import Path
 import re
 import constant
-
 class Util:
+
 
     @staticmethod
     def extract_zipfile():
@@ -88,4 +88,14 @@ class Util:
                 line = f.readline()
         emailList = list(filter(None, emailList))
         return emailList
+
+    @staticmethod
+    def iteratedictionary(dictionary, fileName):
+
+        path = constant.PATH_FILE
+        file = open(path + fileName + '.txt', "w")
+
+        for key, value in dictionary.items():
+            file.write(str(key).replace('\"', '') + '  ' + str(value) + '\n')
+        file.close()
 
