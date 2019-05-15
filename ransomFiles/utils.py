@@ -83,7 +83,9 @@ class Util:
                     email = str(email).replace('[', "")
                     email = str(email).replace(']', "")
                     email = str(email).strip()
-                    emailList.append(email + ' ' + Util.handle_path(htaFile))
+                    if email:
+                        emailList.append(email + ' ' + Util.handle_path(htaFile))
                 line = f.readline()
+        emailList = list(filter(None, emailList))
         return emailList
 

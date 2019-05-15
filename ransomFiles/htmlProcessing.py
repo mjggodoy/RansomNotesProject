@@ -61,16 +61,49 @@ class Htmlprocessing:
                 listLinks.append(link2)
                 processedHtmlFiles.append(self.iterateElementsHtml(listLinks, htmlFile))
                 emailList.append(Util.processemaillLine(htmlFile))
+
             return processedHtmlFiles, emailList
 
 
         def iterateHtmlLists(self):
+            mydicturl = {}
             for familyMalware in self.fileshtmlProcessedURL:
                 for element in familyMalware:
-                    print(element.replace('RansomNoteFiles-master', ''))
+                    element = element.replace('RansomNoteFiles-master', '')
+                    element = element.split(' ')
+                    for item in element:
+                        if 'http' in item:
+                            if item in mydicturl:
+                                mydicturl[item] += 1
+                            else:
+                                mydicturl[item] = 1
+            return mydicturl
+
 
         def iterateEmailList(self):
+            mydictemail = {}
+            myemaildomain = {}
             filestxtProcessedemails = list(filter(None, self.fileshtmlProcessedEmails))
             for element in filestxtProcessedemails:
                 element = str(element).replace('\"', "").replace('RansomNoteFiles-master', '')
-                print(element)
+                element = element.split(',')
+                element = list(filter(None, element))
+                for item in element:
+                    item = item.replace(']', '').replace('[','').strip()
+                    if '@' in item:
+                        item = str(item).rsplit('\'', 1)[0]
+                        if item in mydictemail:
+                            mydictemail[item] += 1
+                        else:
+                            mydictemail[item] = 1
+
+                        emaildomain = str(item).rsplit('@', 1)[1]
+
+                        if emaildomain in myemaildomain:
+                            myemaildomain[emaildomain] += 1
+                        else:
+                            myemaildomain[emaildomain] = 1
+
+            return mydictemail, myemaildomain
+
+

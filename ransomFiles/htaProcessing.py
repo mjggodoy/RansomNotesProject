@@ -74,15 +74,45 @@ class HtaProcessing:
         return listFinal, emailList
 
     def iterateHtalLists(self):
+        mydicturl = {}
         for familyMalware in self.htaFileProcessing:
             for element in familyMalware:
-                print(element.replace('RansomNoteFiles-master', ''))
+                element = element.replace('RansomNoteFiles-master', '')
+                element = element.split('  ')
+                element = list(filter(None, element))
+                for item in element:
+                    item = str(item).strip()
+                    if 'http' in item:
+                        if item in mydicturl:
+                            mydicturl[item] +=1
+                        else:
+                            mydicturl[item] =1
+        return mydicturl
 
     def iterateEmailList(self):
+
+        mydictemail = {}
+        myemaildomain = {}
         emailProcessedemails = list(filter(None, self.emailHta))
         for element in emailProcessedemails:
             for element2 in element:
-                print(element2)
+                element2 = str(element2).split(' ')
+                for item in element2:
+                    item = item.strip().replace('\'', '')
+                    if '@' in item:
+                        if item in mydictemail:
+                            mydictemail[item] +=1
+                        else:
+                            mydictemail[item] =1
+
+                        emaildomain = str(item).rsplit('@', 1)[1]
+
+                        if emaildomain in myemaildomain:
+                            myemaildomain[emaildomain] += 1
+                        else:
+                            myemaildomain[emaildomain] = 1
+
+        return mydictemail, myemaildomain
 
 
 
