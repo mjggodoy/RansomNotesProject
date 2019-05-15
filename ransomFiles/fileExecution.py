@@ -11,14 +11,14 @@ listFilesText, listFilesHtml, listFilesHta, listExtension = myUtil.group_file_ex
 mytxtProcessing = FileTxtProcessing(listFilesText)
 filestxtProcessed = mytxtProcessing.processTxtFiles()       
 mytxtProcessing = FileTxtProcessing(None, filestxtProcessed)
-#mytxtProcessing.iterateTextLists()
+mytxtProcessing.iterateTextLists()
 
 myhtmlProcessing = Htmlprocessing(listFilesHtml, None, None)
 fileshtmlProcessedURL, fileshtmlProcessedEmails  = myhtmlProcessing.processHtmlFiles()
 myhtmlProcessing = Htmlprocessing(None, fileshtmlProcessedURL, None)
-#myhtmlProcessing.iterateHtmlLists()
-#myhtmlProcessing = Htmlprocessing(None, None, fileshtmlProcessedEmails)
-#myhtmlProcessing.iterateEmailList()
+myhtmlProcessing.iterateHtmlLists()
+myhtmlProcessing = Htmlprocessing(None, None, fileshtmlProcessedEmails)
+myhtmlProcessing.iterateEmailList()
 
 myhtaprocessing = HtaProcessing(listFilesHta)
 htaFileProcessing, emailHta = myhtaprocessing.process_hta_files()

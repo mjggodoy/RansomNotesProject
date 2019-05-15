@@ -56,22 +56,6 @@ class HtaProcessing:
 
         return fixedurl
 
-    def processemaillLine(self, htaFile):
-
-        emailList = []
-        with open(htaFile, encoding='latin-1') as f:
-            line = f.readline()
-            while line:
-                line = str(line)
-                if '@' in line:
-                    email = re.findall(r'\b[\w.-]+?@\w+?\.\w+?\b', line)
-                    email = str(email).replace('[', "")
-                    email = str(email).replace(']', "")
-                    email = str(email).replace('\'', "")
-                    email = str(email).strip()
-                    emailList.append(email + ' ' + self.util.handle_path(htaFile))
-                line = f.readline()
-        return emailList
 
     def process_hta_files(self):
 
@@ -85,7 +69,7 @@ class HtaProcessing:
             linkfromTagName = parser.getElementsByTagName('a')
             listWithUrls.append(linkfromTagName)
             listFinal.append(self.extract_url(htaFile, listWithUrls))
-            emailList.append(self.processemaillLine(htaFile))
+            emailList.append(self.util.processemaillLine(htaFile))
 
         return listFinal, emailList
 

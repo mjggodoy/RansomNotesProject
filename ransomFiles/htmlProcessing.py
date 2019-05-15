@@ -49,22 +49,6 @@ class Htmlprocessing:
             return listProcessedLinks
 
 
-        def processemaillLine(self, htmlFile):
-
-            emailList = []
-            with open(htmlFile, encoding='latin-1') as f:
-                line = f.readline()
-                while line:
-                    line = str(line)
-                    if '@' in line:
-                        email = re.findall(r'\b[\w.-]+?@\w+?\.\w+?\b', line)
-                        email = str(email).replace('[', "")
-                        email = str(email).replace(']', "")
-                        if email:
-                            emailList.append(email + ' ' + self.util.handle_path(htmlFile))
-                    line = f.readline()
-            return emailList
-
         def processHtmlFiles(self):
             listLinks = []
             processedHtmlFiles = []
@@ -76,14 +60,14 @@ class Htmlprocessing:
                 link2 = parser.getElementsByTagName('a')
                 listLinks.append(link2)
                 processedHtmlFiles.append(self.iterateElementsHtml(listLinks, htmlFile))
-                emailList.append(self.processemaillLine(htmlFile))
+                emailList.append(Util.processemaillLine(htmlFile))
             return processedHtmlFiles, emailList
 
 
         def iterateHtmlLists(self):
             for familyMalware in self.fileshtmlProcessedURL:
                 for element in familyMalware:
-                    print(familyMalware.replace('RansomNoteFiles-master', ''))
+                    print(element.replace('RansomNoteFiles-master', ''))
 
         def iterateEmailList(self):
             filestxtProcessedemails = list(filter(None, self.fileshtmlProcessedEmails))

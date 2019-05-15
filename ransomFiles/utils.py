@@ -69,3 +69,21 @@ class Util:
         url = url.replace("\'", '')
 
         return url
+
+    @staticmethod
+    def processemaillLine(htaFile):
+
+        emailList = []
+        with open(htaFile, encoding='latin-1') as f:
+            line = f.readline()
+            while line:
+                line = str(line)
+                if '@' in line:
+                    email = re.findall(r'\b[\w.-]+?@\w+?\.\w+?\b', line)
+                    email = str(email).replace('[', "")
+                    email = str(email).replace(']', "")
+                    email = str(email).strip()
+                    emailList.append(email + ' ' + Util.handle_path(htaFile))
+                line = f.readline()
+        return emailList
+
